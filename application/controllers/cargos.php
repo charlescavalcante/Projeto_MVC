@@ -9,7 +9,15 @@ class Cargos extends Controller{
 
 	public function index(){
 
-		$this->render('index');
+		$this->render('cargos/index');
 	}
+        public function add(){
+            if(isset ($_POST['submit'])){
+                $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
+                $novo->save();
+                
+            }
+            $this->render('cargos/add');
+        }
 }
 ?>

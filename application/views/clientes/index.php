@@ -2,12 +2,12 @@
 
  	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Usuarios</h2>
+			<h2>Cargos</h2>
 		</div>
 		<div class="col-sm-6">
 
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Usuarios">
+				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Clientes">
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -17,7 +17,7 @@
 
 		</div>
 		<div class="col-sm-3">
-			<a href="<?=base_url('usuarios/add')?>" class="btn btn-primary pull-right h2">Novo Usuário</a>
+			<a href="<?=base_url('clientes/add')?>" class="btn btn-primary pull-right h2">Novo Cliente</a>
 		</div>
 	</div> <!-- /#top -->
 
@@ -44,7 +44,7 @@
 					<td>01/01/2015</td>
 					<td class="actions">
 						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="<?=base_url('usuarios/edit')?>">Editar</a>
+						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
 						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 					</td>
 				</tr>
@@ -172,10 +172,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+        <h4 class="modal-title" id="modalLabel">Excluir Cliente</h4>
       </div>
       <div class="modal-body">
-        Deseja realmente excluir este item?
+        Deseja realmente excluir este cliente?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Sim</button>

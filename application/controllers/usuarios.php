@@ -13,11 +13,26 @@ class Usuarios extends Controller{
 	}
 
         public function add(){
-            if(isset ($_POST['submit'])){
-                $novo = $this->post_to_obj(array('nome','login','grupo'), new Usuario());
+           if(isset ($_POST['submit'])){
+                $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
                 $novo->save();
-            }
+                
+           }
             $this->render('usuarios/add');
         }
+//        public function add() {
+//            $obj = new Usuario;
+//            $obj->nome = 'Charles';
+//            $obj->sobrenome= 'Cavalcante';
+//            $obj->login = 'charles';
+//            $obj->senha= '15234';
+//            $obj->grupo= 'gerente';
+//            $obj->save();
+//            $this->render('usuarios/add');
+//            
+//        }
+        
+  
+
 }
 ?>

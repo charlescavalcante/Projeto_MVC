@@ -30,7 +30,7 @@
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="grupo">Grupo</label>
-                <select name="grupo" id="grupo" class="form-control">
+                <select name="Grupo" id="grupo">
                     <option> Selecione</option>
                     <option value="gerente" > Gerencia</option>
                     <option value="financa" > Financeiro</option>
@@ -45,9 +45,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <input type="hidden" name="submit" />
-                <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
-                <a href="<?=base_url('usuarios')?>" class="btn btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="template.html" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 

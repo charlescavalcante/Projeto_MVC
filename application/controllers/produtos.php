@@ -15,5 +15,10 @@ class Produtos extends Controller{
 
 		$this->render('produtos/add');
 	}
+        
+        public function edit(){
+
+		$this->render('produtos/edit');
+	}
 }
 ?>

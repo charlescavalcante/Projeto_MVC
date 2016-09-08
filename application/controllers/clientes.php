@@ -22,6 +22,10 @@ class Clientes extends Controller{
            }
             
         }
+        public function edit(){
+
+		$this->render('clientes/edit');
+	}
         
 }
 ?>

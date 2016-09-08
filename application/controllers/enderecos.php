@@ -21,5 +21,9 @@ class Enderecos extends Controller{
            }
             
         }
+        public function edit(){
+
+		$this->render('enderecos/edit');
+	}
 }
 ?>

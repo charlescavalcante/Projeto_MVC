@@ -22,5 +22,9 @@ class Categorias extends Controller{
            }
             
         }
+        public function edit(){
+
+		$this->render('categorias/edit');
+	}
 }
 ?>

@@ -15,5 +15,9 @@ class Fornecedores extends Controller{
 
 		$this->render('fornecedores/add');
 	}
+        public function edit(){
+
+		$this->render('fornecedores/edit');
+	}
 }
 ?>

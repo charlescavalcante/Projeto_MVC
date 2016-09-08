@@ -16,5 +16,9 @@ class Pedidos extends Controller{
 
 		$this->render('pedidos/add');
 	}
+        public function edit(){
+
+		$this->render('pedidos/edit');
+	}
 }
 ?>

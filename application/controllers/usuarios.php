@@ -11,6 +11,10 @@ class Usuarios extends Controller{
 
 		$this->render('usuarios/index');
 	}
+	public function edit(){
+
+		$this->render('usuarios/edit');
+	}
 
         public function add(){
            if(isset ($_POST['submit'])){

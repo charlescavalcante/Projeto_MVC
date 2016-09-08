@@ -1,8 +1,8 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Adicionar Usuário</h3>
+    <h3 class="page-header">Adicionar Funcionário</h3>
   
-    <form action="<?=base_url('usuarios')?>" method="post">
+    <form action="<?=base_url('funcionarios')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
@@ -11,34 +11,29 @@
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="sobrenome">Sobrenome</label>
-                <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Digite seu Sobrenome">
+                <label for="telefone">Telefone</label>
+                <input type="number" name="telefone" class="form-control" id="telefone" placeholder="Digite seu telefone">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="login">Login</label>
-                <input type="text" name="login" class="form-control" id="login" placeholder="Digite seu login">
+                <label for="horario">Horário</label>
+                <input type="time" name="horario" class="form-control" id="horario" placeholder="Informe seu horario">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-3">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+                <label for="cargo_id">Cargo_id</label>
+                <input type="text" name="cargo_id" class="form-control" id="cargo_id" placeholder="Digite seu cargo_id">
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-4">
-                <label for="grupo">Grupo</label>
-                <select name="Grupo" id="grupo">
-                    <option> Selecione</option>
-                    <option value="gerente" > Gerencia</option>
-                    <option value="financa" > Financeiro</option>
-                    <option value="diretor" > Diretoria</option>
-                    <option value="ti" > Informática</option>
-                </select>
+            <div class="form-group col-md-3">
+                <label for="endereco_id">endereco_id</label>
+                <input type="text" name="endereco_id" class="form-control" id="endereco_id" placeholder="Digite seu endereco_id">
             </div>
         </div>
+        
         </div>
 
         <hr />

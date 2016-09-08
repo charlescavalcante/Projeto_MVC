@@ -1,44 +1,39 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Adicionar Usuário</h3>
+    <h3 class="page-header">Adicionar Produto</h3>
   
-    <form action="<?=base_url('usuarios')?>" method="post">
+    <form action="<?=base_url('produtos')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu Nome">
+                <label for="descricao">Descrição</label>
+                <input type="text" name="descricao" class="form-control" id="descricao" placeholder="Descricao">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="sobrenome">Sobrenome</label>
-                <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Digite seu Sobrenome">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" name="quantidade" class="form-control" id="quantidade" placeholder="Quantidade">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="login">Login</label>
-                <input type="text" name="login" class="form-control" id="login" placeholder="Digite seu login">
+                <label for="valor">Valor</label>
+                <input type="number" name="valor" class="form-control" id="valor" placeholder="Valor">
             </div>
         </div>
         <div class="row">
             <div class="form-group col-md-3">
-                <label for="senha">Senha</label>
+                <label for="senha">Categoria_id</label>
                 <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-4">
-                <label for="grupo">Grupo</label>
-                <select name="Grupo" id="grupo">
-                    <option> Selecione</option>
-                    <option value="gerente" > Gerencia</option>
-                    <option value="financa" > Financeiro</option>
-                    <option value="diretor" > Diretoria</option>
-                    <option value="ti" > Informática</option>
-                </select>
+            <div class="form-group col-md-3">
+                <label for="senha">fornecedor_id</label>
+                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
             </div>
         </div>
+        
         </div>
 
         <hr />

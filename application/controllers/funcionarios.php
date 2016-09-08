@@ -9,7 +9,11 @@ class Funcionarios extends Controller{
 
 	public function index(){
 
-		$this->render('index');
+		$this->render('funcionarios/index');
+	}
+	public function add(){
+
+		$this->render('funcionarios/add');
 	}
 }
 ?>

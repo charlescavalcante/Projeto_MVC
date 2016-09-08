@@ -9,7 +9,11 @@ class Produtos extends Controller{
 
 	public function index(){
 
-		$this->render('index');
+		$this->render('produtos/index');
+	}
+	public function add(){
+
+		$this->render('produtos/add');
 	}
 }
 ?>

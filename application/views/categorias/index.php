@@ -7,7 +7,7 @@
 		<div class="col-sm-6">
 
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Cargos">
+				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Categoria">
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>

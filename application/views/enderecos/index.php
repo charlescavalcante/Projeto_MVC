@@ -2,7 +2,7 @@
 
  	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Cargos</h2>
+			<h2>Endereços</h2>
 		</div>
 		<div class="col-sm-6">
 
@@ -17,7 +17,7 @@
 
 		</div>
 		<div class="col-sm-3">
-			<a href="<?=base_url('cargos/add')?>" class="btn btn-primary pull-right h2">Novo Cargo</a>
+			<a href="<?=base_url('enderecos/add')?>" class="btn btn-primary pull-right h2">Novo Endereço</a>
 		</div>
 	</div> <!-- /#top -->
 
@@ -172,10 +172,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="modalLabel">Excluir Cargo</h4>
+        <h4 class="modal-title" id="modalLabel">Excluir Endereço</h4>
       </div>
       <div class="modal-body">
-        Deseja realmente excluir este cargo?
+        Deseja realmente excluir este endereço?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Sim</button>

@@ -12,12 +12,13 @@ class Cargos extends Controller{
 		$this->render('cargos/index');
 	}
         public function add(){
-            if(isset ($_POST['submit'])){
+           if(isset ($_POST['submit'])){
                 $novo = $this->post_to_obj(array('descricao','salario'), new Cargo());
                 $novo->save();
-                
-            }
-            $this->render('cargos/add');
+                $this->render('cargos/index');
+           }else{
+                $this->render('cargos/add');
+           }
         }
 }
 ?>

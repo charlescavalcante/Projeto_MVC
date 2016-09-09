@@ -39,19 +39,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1003</td>
-                        <td>Jeferson Souza</td>
-                        <td>999999999</td>
-                        <td>01/01/2015</td>
-                        <td>Recursos Humanos</td>
-                        <td>Ariquemes</td>
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>
+                    <?php foreach ($valores as $i) {
+ ?>
+                        <tr>
+                            <td><?= $i['id']?></td>
+                            <td><?= $i['nome']?></td>
+                            <td><?= $i['telefone']?></td>
+                            <td><?= $i['entrada']?></td>
+                            <td><?= $i['cargo_id']?></td>
+                            <td><?= $i['endereco_id']?></td>
+                            <td class="actions">
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('funcionarios/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('funcionarios/edit')?>">Editar</a>
+                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                        </tr>
+<?php } ?>
                 </tbody>
             </table>
         </div>

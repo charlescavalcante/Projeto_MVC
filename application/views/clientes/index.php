@@ -30,124 +30,33 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Header 1</th>
-					<th>Header 2</th>
-					<th>Header 3</th>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>Telefone</th>
+					<th>Renda</th>
+					<th>Data Cadastro</th>
+					<th>Endereço ID</th>
 					<th class="actions">Ações</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>1001</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="<?=base_url('clientes/edit')?>">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1002</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1003</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1004</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1005</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1006</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1007</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1008</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1009</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1010</td>
-					<td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-					<td>Jes</td>
-					<td>01/01/2015</td>
-					<td class="actions">
-						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
-						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-					</td>
-				</tr>
-			</tbody>
+                        <?php foreach ($valores as $i) {
+ ?>
+                            <tr>
+                                <td><?= $i['id']?></td>
+                                <td><?= $i['nome']?></td>
+                                <td><?= $i['cpf']?></td>
+                                <td><?= $i['telefone']?></td>
+                                <td><?= $i['renda']?></td>
+                                <td><?= $i['data_cadastro']?></td>
+                                <td><?= $i['endereco_id']?></td>
+                                <td class="actions">
+                                    <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/view')?>">Visualizar</a>
+                                    <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/edit')?>">Editar</a>
+                                    <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                                </td>
+                            </tr>
+<?php } ?>
+			
 		</table>
 	</div>
 

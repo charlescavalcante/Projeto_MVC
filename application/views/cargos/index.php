@@ -30,16 +30,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1001</td>
-                        <td>Teste ipsum dolor sit amet, consectetur adipiscing</td>
-                        <td>Jes</td>                        
-                        <td class="actions">
-                            <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="<?= base_url('cargos/edit') ?>">Editar</a>
-                            <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-                        </td>
-                    </tr>               
+                    <?php foreach ($valores as $i) {
+ ?>
+                        <tr>
+                            <td><?= $i['id']?></td>
+                            <td><?= $i['descricao']?></td>
+                            <td><?= $i['salario']?></td>
+                            <td class="actions">
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/edit')?>">Editar</a>
+                                <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                            </td>
+                        </tr>
+<?php } ?>
                 </tbody>
             </table>
         </div>

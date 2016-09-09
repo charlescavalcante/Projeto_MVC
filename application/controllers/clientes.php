@@ -8,7 +8,9 @@ class Clientes extends Controller{
 	}
 
         public function index() {
-            
+            $cli = new Cliente();
+            $cli->get();
+            $this->data['valores'] = $cli->all_to_array();
             $this->render('clientes/index');
         }
         

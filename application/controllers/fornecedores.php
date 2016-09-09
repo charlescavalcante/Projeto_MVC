@@ -8,6 +8,9 @@ class Fornecedores extends Controller {
     }
 
     public function index() {
+        $for = new Fornecedor();
+        $for->get();
+        $this->data['valores'] = $for->all_to_array();
 
         $this->render('fornecedores/index');
     }

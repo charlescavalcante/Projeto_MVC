@@ -8,13 +8,16 @@ class Cargos extends Controller {
     }
 
     public function index() {
+        $car = new Cargo();
+        $car->get();
+        $this->data['valores'] = $car->all_to_array();
 
         $this->render('cargos/index');
     }
 
     public function add() {
         $car = new Cargos;
-        
+
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('descricao', 'salario'), new Cargo());
             $novo->save();

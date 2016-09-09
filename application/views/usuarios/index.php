@@ -48,7 +48,7 @@
                             <td><?= $i['login']?></td>
                             <td><?= $i['grupo']?></td>
                             <td class="actions">
-                                <a class="btn btn-warning btn-xs" href="<?=base_url('usuarios/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('usuarios/show')?>">Visualizar</a>
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('usuarios/edit')?>">Editar</a>
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>

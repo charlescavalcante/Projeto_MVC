@@ -35,6 +35,13 @@ class Enderecos extends Controller {
         }
     }
 
+    public function show($id) {
+
+        $end = new Endereco();
+        $end->getById($id);
+        $this->render('enderecos/show');
+    }
+
 }
 
 ?>

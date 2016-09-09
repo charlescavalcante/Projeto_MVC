@@ -45,7 +45,7 @@
                             <td><?= $i['cliente_id']?></td>
                             <td><?= $i['data_cadastro']?></td>
                             <td class="actions">
-                                <a class="btn btn-warning btn-xs" href="<?=base_url('pedidos/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('pedidos/show')?>">Visualizar</a>
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('pedidos/edit')?>">Editar</a>
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>

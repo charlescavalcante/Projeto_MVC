@@ -30,6 +30,13 @@ class Pedidos extends Controller {
         $this->render('pedidos/edit');
     }
 
+    public function show($id) {
+
+        $ped = new Pedido();
+        $ped->getById($id);
+        $this->render('pedidos/show');
+    }
+
 }
 
 ?>

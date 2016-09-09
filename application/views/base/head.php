@@ -40,7 +40,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li><a href="#">NomeUsuário</a></li>
+                                <li><a href="#">Nome_Usuário</a></li>
                                 <li><a href="<?=base_url('usuarios')?>">Usuários</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="<?=base_url('Usuarios/logout')?>">Sair</a></li>

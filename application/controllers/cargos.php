@@ -31,7 +31,12 @@ class Cargos extends Controller {
 
         $this->render('cargos/edit');
     }
+    public function show($id) {
 
+        $car = new Cargo();
+        $car->getById($id);
+        $this->render('cargos/show');
+    }
 }
 
 ?>

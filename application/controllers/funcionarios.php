@@ -28,6 +28,12 @@ class Funcionarios extends Controller {
 
         $this->render('funcionarios/index');
     }
+    public function show($id) {
+
+        $fun = new Funcionario();
+        $fun->getById($id);
+        $this->render('funcionarios/show');
+    }
 
 }
 

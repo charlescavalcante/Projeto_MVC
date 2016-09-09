@@ -38,7 +38,7 @@
                             <td><?= $i['descricao']?></td>
                             <td><?= $i['salario']?></td>
                             <td class="actions">
-                                <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/show')?>">Visualizar</a>
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('cargos/edit')?>">Editar</a>
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>

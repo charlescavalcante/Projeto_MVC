@@ -28,5 +28,10 @@ class Usuarios extends Controller {
             $this->render('usuarios/add');
         }
     }
+public function show($id) {
 
+        $usu = new Usuario();
+        $usu->getById($id);
+        $this->render('usuarios/show');
+    }
 }

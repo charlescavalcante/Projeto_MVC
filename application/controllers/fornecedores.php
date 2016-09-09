@@ -30,6 +30,13 @@ class Fornecedores extends Controller {
         $this->render('fornecedores/edit');
     }
 
+    public function show($id) {
+
+        $for = new Fornecedores();
+        $for->getById($id);
+        $this->render('fornecedores/show');
+    }
+
 }
 
 ?>

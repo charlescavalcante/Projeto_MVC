@@ -49,7 +49,7 @@
                             <td><?= $i['quantidade']?></td>
                             <td><?= $i['valor']?></td>
                             <td class="actions">
-                                <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/view')?>">Visualizar</a>
+                                <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/show')?>">Visualizar</a>
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/edit')?>">Editar</a>
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>

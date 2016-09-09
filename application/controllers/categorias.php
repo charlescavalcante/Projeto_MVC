@@ -29,7 +29,12 @@ class Categorias extends Controller {
 
         $this->render('categorias/edit');
     }
+    public function show($id) {
 
+        $cat = new Categoria();
+        $cat->getById($id);
+        $this->render('categorias/show');
+    }
 }
 
 ?>

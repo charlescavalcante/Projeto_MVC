@@ -33,25 +33,18 @@
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="endereco">Endereco</label>
-                <select  name="endereco_id">
-                    <optgroup  label="Endereco">
+                <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
                     <?php
-                    require_once '../../../system/model.php';
-                    $endereco_id = $conn->query("SELECT * FROM framework.enderecos;");
-                    $endereco_id->setFetchMode(PDO::FETCH_ASSOC);
-
-                    while ($linha = $endereco_id->fetch()) {
-                        echo "<option value={$linha['id']}> {$linha['titulo']}</option>";
-                    }
-                    echo "</optgroup>";
-                    ?>            
-                </select>
+                        $l=0;
+                        while ($l<=$valores[$l]['id']) {
+                            echo "<option value={$valores[0]['id']} > {$l['id']}</option>";
+                        }
+                    ?>
+                </select>	
             </div>
         </div>
-        
-    </div>
 
-        <hr />
 
         <div class="row">
             <div class="col-md-12">

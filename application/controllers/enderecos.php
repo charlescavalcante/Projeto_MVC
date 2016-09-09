@@ -46,5 +46,9 @@ class Enderecos extends Controller{
             $endereco->get();
             
         }
+        public function edit(){
+
+		$this->render('enderecos/edit');
+	}
 }
 ?>

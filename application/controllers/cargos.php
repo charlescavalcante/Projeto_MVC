@@ -20,5 +20,10 @@ class Cargos extends Controller{
                 $this->render('cargos/add');
            }
         }
+        
+        public function edit(){
+
+		$this->render('cargos/edit');
+	}
 }
 ?>

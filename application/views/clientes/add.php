@@ -1,15 +1,15 @@
 <div id="main" class="container-fluid">
 
     <h3 class="page-header">Adicionar Cliente</h3>
-  
-    <form action="<?=base_url('clientes/add')?>" method="post">
+
+    <form action="<?= base_url('clientes/add') ?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu Nome">
             </div>
         </div>
-        
+
         <div class="row">
             <div class="form-group col-md-3">
                 <label for="cpf">CPF</label>
@@ -23,7 +23,7 @@
                 <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Digite seu telefone">
             </div>
         </div>
-        
+
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="renda">Renda</label>
@@ -32,6 +32,7 @@
         </div>
         <div class="row">
             <div class="form-group col-md-4">
+
                 <label for="endereco">Endereco</label>
                 <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
                     <option> Selecione</option>
@@ -44,15 +45,16 @@
                 </select>	
             </div>
         </div>
-
-
         <div class="row">
             <div class="col-md-12">
                 <input type="hidden" name="submit" />
-                <button type="submit" name="submit" class="btn btn-primary">Salvar</button>
-                <a href="<?=base_url('clientes')?>" class="btn btn-default">Cancelar</a>
+                <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
+                <a href="<?= base_url('clientes') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
+
+
+
 
     </form>
 </div>

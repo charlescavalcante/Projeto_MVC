@@ -36,6 +36,10 @@ class Clientes extends Controller{
             $val = $this->data['valores'];
             
         }
+        public function edit(){
+
+		$this->render('clientes/edit');
+	}
         
 //        public function show() {
 //            $endereco = new Endereco();

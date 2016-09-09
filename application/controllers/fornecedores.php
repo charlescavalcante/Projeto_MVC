@@ -9,7 +9,15 @@ class Fornecedores extends Controller{
 
 	public function index(){
 
-		$this->render('index');
+		$this->render('fornecedores/index');
+	}
+	public function add(){
+
+		$this->render('fornecedores/add');
+	}
+        public function edit(){
+
+		$this->render('fornecedores/edit');
 	}
 }
 ?>

@@ -2,12 +2,12 @@
 
  	<div id="top" class="row">
 		<div class="col-sm-3">
-			<h2>Cargos</h2>
+			<h2>Fornecedores</h2>
 		</div>
 		<div class="col-sm-6">
 
 			<div class="input-group h2">
-				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Cargos">
+				<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Fornecedores">
 				<span class="input-group-btn">
 					<button class="btn btn-primary" type="submit">
 						<span class="glyphicon glyphicon-search"></span>
@@ -17,7 +17,7 @@
 
 		</div>
 		<div class="col-sm-3">
-			<a href="<?=base_url('cargos/add')?>" class="btn btn-primary pull-right h2">Novo Cargo</a>
+			<a href="<?=base_url('fornecedores/add')?>" class="btn btn-primary pull-right h2">Novo Fornecedor</a>
 		</div>
 	</div> <!-- /#top -->
 
@@ -44,7 +44,7 @@
 					<td>01/01/2015</td>
 					<td class="actions">
 						<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
-						<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+						<a class="btn btn-warning btn-xs" href="<?=base_url('fornecedores/edit')?>">Editar</a>
 						<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
 					</td>
 				</tr>
@@ -175,7 +175,7 @@
         <h4 class="modal-title" id="modalLabel">Excluir Cargo</h4>
       </div>
       <div class="modal-body">
-        Deseja realmente excluir este cargo?
+        Deseja realmente excluir este fornecedor?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Sim</button>

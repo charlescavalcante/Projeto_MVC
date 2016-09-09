@@ -1,3 +1,4 @@
+
 <div id="main" class="container-fluid">
   
   <h3 class="page-header">Editar Endereço</h3>
@@ -37,6 +38,7 @@
 	  <div class="col-md-12">
 	  	<button name="submit" type="submit" class="btn btn-primary">Salvar</button>
 		<a href="<?= base_url('enderecos')?>" class="btn btn-default">Cancelar</a>
+
 	  </div>
 	</div>
 

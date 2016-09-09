@@ -40,7 +40,7 @@
                 </thead>
                 <tbody>
                     <?php foreach ($valores as $i) {
- ?>
+                    ?>
                         <tr>
                             <td><?= $i['id']?></td>
                             <td><?= $i['nome']?></td>
@@ -54,7 +54,7 @@
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>
                         </tr>
-<?php } ?>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>

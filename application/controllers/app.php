@@ -1,16 +1,17 @@
 <?php
 
-class App extends Controller{
+class App extends Controller {
 
-	function __construct(){
-		parent::__construct();
-                $this->load->native_helper('URLHelper');
-	}
+    function __construct() {
+        parent::__construct();
+        $this->load->native_helper('URLHelper');
+    }
 
-	public function index(){
+    public function index() {
 
-		$this->render('index');
-	}
+        $this->render('index');
+    }
+
 }
 
 ?>

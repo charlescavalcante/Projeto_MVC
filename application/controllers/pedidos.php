@@ -13,8 +13,13 @@ class Pedidos extends Controller{
 	}
 
         public function add(){
-
-		$this->render('pedidos/add');
+   if (isset($_POST['submit'])) {
+            $novo = $this->post_to_obj(array('cliente_id', 'data_cadastro', 'funcionario_id', 'id'), new Pedido());
+            $novo->save();
+            $this->render('pedidos/index');
+        } else {
+            $this->render('pedidos/add');
+        }
 	}
         public function edit(){
 

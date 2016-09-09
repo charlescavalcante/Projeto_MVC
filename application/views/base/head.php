@@ -33,7 +33,7 @@
                     <li><a href="<?= base_url('fornecedores') ?>">Fornecedores</a></li>
                     <li><a href="<?= base_url('produtos') ?>">Produtos</a></li>
                     <li><a href="<?= base_url('categorias') ?>">Categorias</a></li>
-                    <li style="margin:10px 5px 0 0">
+                    <li style="margin:10px 50px 0 0">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <i class="glyphicon glyphicon-cog"></i>

@@ -20,6 +20,7 @@ class Usuarios extends Controller{
         public function add(){
            if(isset ($_POST['submit'])){
                 $novo = $this->post_to_obj(array('nome','sobrenome','login','senha','grupo'), new Usuario());
+                $novo->data_cadastro = date('Y/m/d');
                 $novo->save();
                 $this->render('usuarios/index');
            }else{

@@ -39,8 +39,14 @@
                     <?php
                         $l=0;
                         while ($l<=$valores[$l]['id']) {
-                            echo "<option value={$valores[0]['id']} > {$l['id']}</option>";
-                        }
+                            try{
+                                $idf = $valores[$l]['id'];
+                                echo "<option value='$idf'> Bairro: {$valores[$l]['bairro']} - CEP: {$valores[$l]['cep']} </option>";
+                                $l++;
+                            } catch (Exception $ex) {
+                                return $ex->getMessage();
+                            }
+                       }
                     ?>
                 </select>	
             </div>

@@ -8,12 +8,13 @@ class Usuarios extends Controller{
 	}
 
 	public function index(){
-
-		$this->render('usuarios/index');
-	}
+            $user = new Usuario();
+            $user->get();
+            $this->data['valores'] = $user->all_to_array();
+            $this->render('usuarios/index');
+        }
 	public function edit(){
-
-		$this->render('usuarios/edit');
+            $this->render('usuarios/edit');
 	}
 
         public function add(){

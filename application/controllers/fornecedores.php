@@ -1,23 +1,32 @@
 <?php
 
-class Fornecedores extends Controller{
+class Fornecedores extends Controller {
 
-	function __construct(){
-		parent::__construct();
-                $this->load->native_helper('URLHelper');
-	}
+    function __construct() {
+        parent::__construct();
+        $this->load->native_helper('URLHelper');
+    }
 
-	public function index(){
+    public function index() {
 
-		$this->render('fornecedores/index');
-	}
-	public function add(){
+        $this->render('fornecedores/index');
+    }
 
-		$this->render('fornecedores/add');
-	}
-        public function edit(){
+    public function add() {
+        if (isset($_POST['submit'])) {
+            $novo = $this->post_to_obj(array('cnpj', 'endereco_id', 'id', 'nome', 'telefone'), new Fornecedor());
+            $novo->save();
+            $this->render('fornecedores/index');
+        } else {
+            $this->render('fornecedores/add');
+        }
+    }
 
-		$this->render('fornecedores/edit');
-	}
+    public function edit() {
+
+        $this->render('fornecedores/edit');
+    }
+
 }
+
 ?>

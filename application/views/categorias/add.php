@@ -9,6 +9,7 @@ div<div id="main" class="container-fluid">
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Categoria">
             </div>
         </div>
+    </form>
 </div>
 
 <hr />

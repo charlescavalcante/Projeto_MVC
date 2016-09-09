@@ -52,9 +52,5 @@
                 <a href="<?= base_url('clientes') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
-
-
-
-
     </form>
 </div>

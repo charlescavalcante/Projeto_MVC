@@ -1,42 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>CRUD com Bootstrap 3</title>
 
- <link href="css/bootstrap.min.css" rel="stylesheet">
- <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-
- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-   <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-     <span class="sr-only">Toggle navigation</span>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Web Dev Academy</a>
-   </div>
-   <div id="navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-right">
-     <li><a href="#">In&iacute;cio</a></li>
-     <li><a href="#">Op&ccedil;&otilde;es</a></li>
-     <li><a href="#">Perfil</a></li>
-     <li><a href="#">Ajuda</a></li>
-    </ul>
-   </div>
-  </div>
- </nav>
- 
- <div id="main" class="container-fluid">
+<div id="main" class="container-fluid">
   
-  <h3 class="page-header">Editar Item</h3>
+  <h3 class="page-header">Editar Endereço</h3>
   
+<<<<<<< HEAD
   <form action="<?=base_url('enderecos/add')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
@@ -66,6 +33,46 @@
         </div>
     
         <hr />
+=======
+  <form action="<?= base_url('enderecos/add')?>" method="post">
+  	<div class="row">
+<!--          <div class="form-group col-md-4">
+  	  	<label for="id">Id</label>
+                <input type="number"  class="form-control" id="id" placeholder="Id">
+  	  </div>-->
+	  <div class="form-group col-md-4">
+  	  	<label for="cep">Cep</label>
+                <input type="number" name="cep" class="form-control" id="cep" placeholder="CEP">
+  	  </div>
+	  <div class="form-group col-md-4">
+  	  	<label for="logradouro">Logradouro</label>
+                <input type="text" name="logradouro" class="form-control" id="logradouro" placeholder="Logradouro">
+  	  </div>
+          <div class="form-group col-md-4">
+  	  	<label for="bairro">Bairro</label>
+                <input type="text" name="bairro" class="form-control" id="bairro" placeholder="Bairro">
+  	  </div>
+          <div class="form-group col-md-4">
+  	  	<label for="cidade">Cidade</label>
+                <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade">
+  	  </div>
+          <div class="form-group col-md-4">
+  	  	<label for="estado">Estado</label>
+                <input type="text" name="estado" class="form-control" id="estado" placeholder="Estado">
+  	  </div>
+          <!-- data cadastro e endereço_id -->
+	</div>
+	
+	<hr>
+	
+	<div class="row">
+	  <div class="col-md-12">
+	  	<button name="submit" type="submit" class="btn btn-primary">Salvar</button>
+		<a href="<?= base_url('enderecos')?>" class="btn btn-default">Cancelar</a>
+
+	  </div>
+	</div>
+>>>>>>> ed80c7f23b7dc84834e828a9ef339b6584165658
 
         <div class="row">
             <div class="col-md-12">
@@ -77,9 +84,3 @@
 
     </form>
  </div>
- 
-
- <script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
-</body>
-</html>

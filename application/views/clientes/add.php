@@ -41,7 +41,7 @@
                         while ($l<=$valores[$l]['id']) {
                             try{
                                 $idf = $valores[$l]['id'];
-                                echo "<option value='$idf'> Bairro: {$valores[$l]['bairro']} - CEP: {$valores[$l]['cep']} </option>";
+                                echo "<option value='$idf'> Logradouro: {$valores[$l]['logradouro']} - Bairro: {$valores[$l]['bairro']} </option>";
                                 $l++;
                             } catch (Exception $ex) {
                                 return $ex->getMessage();

@@ -21,8 +21,9 @@ class Clientes extends Controller {
         $this->view('clientes/add', $this->data);
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('nome', 'cpf', 'telefone', 'renda', 'endereco_id'), new Cliente());
+            $novo->data_cadastro = date('Y/m/d H:i:s');
             $novo->save();
-            $this->render('clientes/index');
+            redirect('clientes');
         } else {
             $this->render('clientes/add');
         }
@@ -30,8 +31,15 @@ class Clientes extends Controller {
 
     public function edit() {
 
-        $this->render('clientes/edit');
+        if (isset($_POST['submit'])) {
+            $novo = $this->post_to_obj(array('nome', 'cpf', 'telefone', 'renda', 'data_cadastro', 'endereco_id'), new Cliente());
+            $novo->update();
+            $this->index();
+        } else {
+            $this->render('clientes/edit');
+        }
     }
+
     public function show($id) {
 
         $cli = new Cliente();

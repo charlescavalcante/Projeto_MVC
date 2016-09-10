@@ -21,7 +21,7 @@ class Cargos extends Controller {
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('descricao', 'salario'), new Cargo());
             $novo->save();
-            $this->render('cargos/index');
+            redirect('cargos');
         } else {
             $this->render('cargos/add');
         }

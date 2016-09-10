@@ -16,10 +16,19 @@ class Pedidos extends Controller {
     }
 
     public function add() {
+        $fun = new Funcionario();
+        $fun->get();
+        $this->data['valoresF'] = $fun->all_to_array();
+
+        $cli = new Cliente();
+        $cli->get();
+        $this->data['valoresC'] = $cli->all_to_array();
+
         if (isset($_POST['submit'])) {
-            $novo = $this->post_to_obj(array('cliente_id', 'data_cadastro', 'funcionario_id', 'id'), new Pedido());
+            $novo = $this->post_to_obj(array('cliente_id', 'funcionario_id'), new Pedido());
+            $novo->data_cadastro = date('Y/m/d H:i:s');
             $novo->save();
-            $this->render('pedidos/index');
+            redirect('pedidos');
         } else {
             $this->render('pedidos/add');
         }

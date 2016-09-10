@@ -2,7 +2,7 @@
 
     <h3 class="page-header">Adicionar Fornecedor</h3>
 
-    <form action="<?= base_url('fornecedores') ?>" method="post">
+    <form action="<?= base_url('fornecedores/add') ?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
@@ -22,9 +22,24 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <label for="endereco_id">Endereço ID</label>
-                <input type="number" name="endereco_id" class="form-control" id="endereco_id" placeholder="endereco_id">
+            <div class="form-group col-md-4">
+
+                <label for="endereco">Endereco</label>
+                <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <?php
+                    $l = 0;
+                    while ($l <= $valores[$l]['id']) {
+                        try {
+                            $idf = $valores[$l]['id'];
+                           echo "<option value='$idf'> Logradouro: {$valores[$l]['logradouro']} - Bairro: {$valores[$l]['bairro']} </option>";
+                            $l++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
+                </select>
             </div>
         </div>
 

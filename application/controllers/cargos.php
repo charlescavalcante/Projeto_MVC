@@ -27,8 +27,9 @@ class Cargos extends Controller {
         }
     }
 
-    public function edit() {
-
+    public function edit($id) {
+        $this->edCar->getById($id);
+        $this->data['edit_car'] = $this->edCar->to_array();
         $this->render('cargos/edit');
     }
     public function show($id) {

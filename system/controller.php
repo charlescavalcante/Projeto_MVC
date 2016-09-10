@@ -3,10 +3,16 @@
 class Controller{
 
 	protected $load;
+        protected $uobj;
+        protected $uobje;
+        protected $edCar;
 	public $data = array();
 
 	function __construct(){
 		$this->load = new Loader();
+                $this->uobj = new Cliente();
+                $this->uobje = new Endereco();
+                $this->edCar = new Cargo();
 	}
 
 	protected function view($file, Array $vars = null){

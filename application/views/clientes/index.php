@@ -50,7 +50,7 @@
                         <td><?= $i['data_cadastro']?></td>
                         <td><?= $i['endereco_id']?></td>
                         <td class="actions">
-                            <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/show')?>">Visualizar</a>
+                            <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/show/'.$i['id')?>">Visualizar</a>
                             <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/edit/'.$i['id'])?>">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>

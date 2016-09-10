@@ -47,9 +47,10 @@ class Clientes extends Controller {
 
     public function show($id) {
 
-        $cli = new Cliente();
-        $cli->getById($id);
+        
+        $this->cli->getById($id);
         $this->render('clientes/show');
+        $this->data['show_cli'] = $this->cli->to_array();
     }
 
 }

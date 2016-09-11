@@ -15,10 +15,18 @@ class Funcionarios extends Controller {
     }
 
     public function add() {
+        $end = new Endereco();
+        $end->get();
+        $this->data['valores'] = $end->all_to_array();
+
+        $car = new Cargo();
+        $car->get();
+        $this->data['valCar'] = $car->all_to_array();
+        $this->view('funcionarios/add', $this->data);
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('cargo_id', 'endereco_id', 'entrada', 'id', 'nome', 'telefone'), new Funcionario());
             $novo->save();
-            $this->render('funcionarios/index');
+            redirect('funcionarios');
         } else {
             $this->render('funcionarios/add');
         }

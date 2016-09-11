@@ -2,7 +2,7 @@
 
     <h3 class="page-header">Adicionar Produto</h3>
   
-    <form action="<?=base_url('produtos')?>" method="post">
+    <form action="<?=base_url('produtos/add')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="descricao">Descrição</label>
@@ -22,26 +22,52 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <label for="senha">Categoria_id</label>
-                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+            <div class="form-group col-md-4">
+
+                <label for="categoria">Categoria</label>
+                <select name="categoria_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <?php
+                    $l = 0;
+                    while ($l <= $valoresC[$l]['id']) {
+                        try {
+                            $idf = $valoresC[$l]['id'];
+                            echo "<option value='$idf'> Nome: {$valoresC[$l]['nome']}</option>";
+                            $l++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <label for="senha">fornecedor_id</label>
-                <input type="password" name="senha" class="form-control" id="senha" placeholder="Digite sua senha">
+            <div class="form-group col-md-4">
+
+                <label for="fornecedor">Funcionario</label>
+                <select name="fornecedor_id" id="fornecedor" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <?php
+                    $l = 0;
+                    while ($l <= $valoresF[$l]['id']) {
+                        try {
+                            $idf = $valoresF[$l]['id'];
+                            echo "<option value='$idf'> Nome: {$valoresF[$l]['nome']} - Telefone: {$valoresF[$l]['telefone']} </option>";
+                            $l++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
+                </select>
             </div>
         </div>
-        
-        </div>
-
-        <hr />
-
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="template.html" class="btn btn-default">Cancelar</a>
+                <input type="hidden" name="submit" />
+                <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
+                <a href="<?= base_url('produtos') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 

@@ -17,7 +17,7 @@
 
         </div>
         <div class="col-sm-3">
-            <a href="<?=base_url('clientes/add')?>" class="btn btn-primary pull-right h2">Novo Cliente</a>
+            <a href="<?= base_url('clientes/add') ?>" class="btn btn-primary pull-right h2">Novo Cliente</a>
         </div>
     </div> <!-- /#top -->
 
@@ -40,18 +40,18 @@
                     </tr>
                 </thead>
                 <?php foreach ($valores as $i) {
-                ?>
+                    ?>
                     <tr>
-                        <td><?= $i['id']?></td>
-                        <td><?= $i['nome']?></td>
-                        <td><?= $i['cpf']?></td>
-                        <td><?= $i['telefone']?></td>
-                        <td><?= $i['renda']?></td>
-                        <td><?= $i['data_cadastro']?></td>
-                        <td><?= $i['endereco_id']?></td>
+                        <td><?= $i['id'] ?></td>
+                        <td><?= $i['nome'] ?></td>
+                        <td><?= $i['cpf'] ?></td>
+                        <td><?= $i['telefone'] ?></td>
+                        <td><?= $i['renda'] ?></td>
+                        <td><?= $i['data_cadastro'] ?></td>
+                        <td><?= $i['endereco_id'] ?></td>
                         <td class="actions">
-                            <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/show')?>">Visualizar</a>
-                            <a class="btn btn-warning btn-xs" href="<?=base_url('clientes/edit')?>">Editar</a>
+                            <a class="btn btn-warning btn-xs" href="<?= base_url('clientes/show/'.$i['id'])?>">Visualizar</a>
+                            <a class="btn btn-warning btn-xs" href="<?= base_url('clientes/edit/' . $i['id']) ?>">Editar</a>
                             <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                         </td>
                     </tr>

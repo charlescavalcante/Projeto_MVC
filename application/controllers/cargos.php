@@ -21,14 +21,15 @@ class Cargos extends Controller {
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('descricao', 'salario'), new Cargo());
             $novo->save();
-            $this->render('cargos/index');
+            redirect('cargos');
         } else {
             $this->render('cargos/add');
         }
     }
 
-    public function edit() {
-
+    public function edit($id) {
+        $this->edCar->getById($id);
+        $this->data['edit_car'] = $this->edCar->to_array();
         $this->render('cargos/edit');
     }
     public function show($id) {

@@ -1,8 +1,8 @@
 <div id="main" class="container-fluid">
 
     <h3 class="page-header">Adicionar Funcionário</h3>
-  
-    <form action="<?=base_url('funcionarios')?>" method="post">
+
+    <form action="<?=base_url('funcionarios/add')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
@@ -22,26 +22,51 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <label for="cargo_id">Cargo_id</label>
-                <input type="text" name="cargo_id" class="form-control" id="cargo_id" placeholder="Digite seu cargo_id">
+            <div class="form-group col-md-4">
+
+                <label for="cargo">Cargo</label>
+                <select name="cargo_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <?php
+                    $l = 0;
+                    while ($l <= $valCar[$l]['id']) {
+                        try {
+                            $idf = $valCar[$l]['id'];
+                            echo "<option value='$idf'> Descrição: {$valCar[$l]['descricao']} - Salario: {$valCar[$l]['salario']} </option>";
+                            $l++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
+                </select>
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-md-3">
-                <label for="endereco_id">endereco_id</label>
-                <input type="text" name="endereco_id" class="form-control" id="endereco_id" placeholder="Digite seu endereco_id">
+            <div class="form-group col-md-4">
+                <label for="endereco">Endereco</label>
+                <select name="endereco_id" id="endereco" class="form-control" placeholder="Selecione">
+                    <option> Selecione</option>
+                    <?php
+                    $l = 0;
+                    while ($l <= $valores[$l]['id']) {
+                        try {
+                            $idf = $valores[$l]['id'];
+                            echo "<option value='$idf'> Logradouro: {$valores[$l]['logradouro']} - Bairro: {$valores[$l]['bairro']} </option>";
+                            $l++;
+                        } catch (Exception $ex) {
+                            return $ex->getMessage();
+                        }
+                    }
+                    ?>
+                </select>
             </div>
         </div>
-        
-        </div>
-
-        <hr />
-
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="template.html" class="btn btn-default">Cancelar</a>
+                <input type="hidden" name="submit" />
+                <button name="submit" type="submit" class="btn btn-primary">Salvar</button>
+                <a href="<?= base_url('funcionarios') ?>" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 

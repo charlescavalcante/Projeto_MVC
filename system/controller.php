@@ -4,7 +4,7 @@ class Controller{
 
 	protected $load;
         protected $uobj;
-        protected $uobje;
+        protected $edEnd;
         protected $edCar;
         protected $cli;
 	public $data = array();
@@ -12,7 +12,7 @@ class Controller{
 	function __construct(){
 		$this->load = new Loader();
                 $this->uobj = new Cliente();
-                $this->uobje = new Endereco();
+                $this->edEnd = new Endereco();
                 $this->edCar = new Cargo();
                 $cli = new Cliente();
 	}

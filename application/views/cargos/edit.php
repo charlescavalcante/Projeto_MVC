@@ -1,6 +1,6 @@
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Editar Cliente</h3>
+    <h3 class="page-header">Editar Cargo</h3>
 
     <form action="<?= base_url('cargos/edit') ?>" method="post">
          <div class="row">
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="salario">Salario</label>
-                <input type="text" name="salario" class="form-control" id="salario" placeholder="Valor" value="<?=$edit_car['valor']?>">
+                <input type="text" name="salario" class="form-control" id="salario" placeholder="Valor" value="<?=$edit_car['salario']?>">
             </div>
         </div>
         <div class="row">

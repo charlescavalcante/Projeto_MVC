@@ -3,7 +3,7 @@
   
   <h3 class="page-header">Editar Endereço</h3>
   
-  <form action="<?=base_url('enderecos/add')?>" method="post">
+  <form action="<?=base_url('enderecos/edit')?>" method="post">
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="cep">CEP</label>
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group col-md-3">
                 <label for="estado">Estado</label>
-                <input type="text" name="estado" class="form-control" id="estado" placeholder="Digite sue Estado">
+                <input type="text" name="estado" class="form-control" id="estado" placeholder="Digite sue Estado" value="<?=$edit_end['estado']?>">
             </div>
         </div>
     

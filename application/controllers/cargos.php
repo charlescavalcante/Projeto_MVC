@@ -10,8 +10,8 @@ class Cargos extends Controller {
     public function index() {
         $car = new Cargo();
         $car->get();
+        
         $this->data['valores'] = $car->all_to_array();
-
         $this->render('cargos/index');
     }
 

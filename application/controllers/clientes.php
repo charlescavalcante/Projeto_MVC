@@ -18,11 +18,11 @@ class Clientes extends Controller {
         $end = new Endereco();
         $end->get();
         $this->data['valores'] = $end->all_to_array();
-        $this->view('clientes/add', $this->data);
+        $this->render('clientes/add');
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('nome', 'cpf', 'telefone', 'renda', 'endereco_id'), new Cliente());
             $novo->save();
-            $this->render('clientes/index');
+            redirect('clientes');
         } else {
             $this->render('clientes/add');
         }

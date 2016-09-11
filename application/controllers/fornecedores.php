@@ -16,6 +16,10 @@ class Fornecedores extends Controller {
     }
 
     public function add() {
+        $end = new Endereco();
+        $end->get();
+        $this->data['valores'] = $end->all_to_array();
+        $this->view('fornecedores/add', $this->data);
         if (isset($_POST['submit'])) {
             $novo = $this->post_to_obj(array('cnpj', 'endereco_id', 'id', 'nome', 'telefone'), new Fornecedor());
             $novo->save();

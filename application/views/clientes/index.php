@@ -2,7 +2,7 @@
 
     <div id="top" class="row">
         <div class="col-sm-3">
-            <h2>Cargos</h2>
+            <h2>Clientes</h2>
         </div>
         <div class="col-sm-6">
 

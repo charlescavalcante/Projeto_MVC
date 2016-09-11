@@ -43,8 +43,9 @@
                                 <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
                             </td>
                         </tr>
+                         
                     <?php } ?>
-
+                        
                 </tbody>
             </table>
         </div>

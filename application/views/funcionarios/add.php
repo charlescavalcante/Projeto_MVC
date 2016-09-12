@@ -17,19 +17,13 @@
         </div>
         <div class="row">
             <div class="form-group col-md-4">
-                <label for="horario">Horário</label>
-                <input type="time" name="horario" class="form-control" id="horario" placeholder="Informe seu horario">
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-4">
 
                 <label for="cargo">Cargo</label>
                 <select name="cargo_id" id="endereco" class="form-control" placeholder="Selecione">
                     <option> Selecione</option>
                     <?php
                     $l = 0;
-                    while ($l <= $valCar[$l]['id']) {
+                    while ($l<= $valCar[$l]['id']) {
                         try {
                             $idf = $valCar[$l]['id'];
                             echo "<option value='$idf'> Descrição: {$valCar[$l]['descricao']} - Salario: {$valCar[$l]['salario']} </option>";

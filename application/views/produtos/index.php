@@ -2,12 +2,12 @@
 
     <div id="top" class="row">
         <div class="col-sm-3">
-            <h2>Produtos</h2>
+            <h2>Produto</h2>
         </div>
         <div class="col-sm-6">
 
             <div class="input-group h2">
-                <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar produtos">
+                <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Produtos">
                 <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit">
                         <span class="glyphicon glyphicon-search"></span>
@@ -17,7 +17,7 @@
 
         </div>
         <div class="col-sm-3">
-            <a href="<?=base_url('produtos/add')?>" class="btn btn-primary pull-right h2">Novo produto</a>
+            <a href="<?= base_url('produtos/add') ?>" class="btn btn-primary pull-right h2">Novo Produto</a>
         </div>
     </div> <!-- /#top -->
 
@@ -30,11 +30,11 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Descrição</th>
-                        <th>Fornecedor ID</th>
-                        <th>Categoria ID</th>
+                        <th>Descricao</th>
                         <th>Quantidade</th>
                         <th>Valor</th>
+                        <th>Categoria ID</th>
+                        <th>Fornecedor ID</th>
                         <th class="actions">Ações</th>
                     </tr>
                 </thead>
@@ -44,10 +44,10 @@
                         <tr>
                             <td><?= $i['id']?></td>
                             <td><?= $i['descricao']?></td>
-                            <td><?= $i['fornecedor_id']?></td>
-                            <td><?= $i['categoria_id']?></td>
                             <td><?= $i['quantidade']?></td>
                             <td><?= $i['valor']?></td>
+                            <td><?= $i['categoria_id']?></td>
+                            <td><?= $i['fornecedor_id']?></td>
                             <td class="actions">
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/show')?>">Visualizar</a>
                                 <a class="btn btn-warning btn-xs" href="<?=base_url('produtos/edit')?>">Editar</a>
@@ -80,10 +80,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Excluir produto</h4>
+                <h4 class="modal-title" id="modalLabel">Excluir funcionário</h4>
             </div>
             <div class="modal-body">
-                Deseja realmente excluir este produto?
+                Deseja realmente excluir este Produto?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Sim</button>

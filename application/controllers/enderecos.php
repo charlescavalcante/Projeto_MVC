@@ -24,7 +24,12 @@ class Enderecos extends Controller {
         }
     }
 
-public function edit($id) {
+    public function edit($id) {
+        if (isset($_POST['submit'])) {
+            $novo = $this->post_to_obj(array('cep', 'logradouro', 'bairro', 'cidade', 'estado'), new Endereco());
+            $novo->save();
+            redirect('enderecos');
+        }
         $this->edEnd->getById($id);
         $this->data['edit_end'] = $this->edEnd->to_array();
         $this->render('enderecos/edit');

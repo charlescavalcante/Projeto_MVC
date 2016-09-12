@@ -7,6 +7,7 @@ class Controller{
         protected $edEnd;
         protected $edCar;
         protected $cli;
+        protected $fun;
 	public $data = array();
 
 	function __construct(){
@@ -14,6 +15,7 @@ class Controller{
                 $this->uobj = new Cliente();
                 $this->edEnd = new Endereco();
                 $this->edCar = new Cargo();
+                $this->fun = new Funcionario();
                 $cli = new Cliente();
 	}
 

@@ -11,10 +11,6 @@ class Endereco extends Model {
 		parent::__construct();
     }
     
-    public function showValues() {
-        $obj = new Endereco();
-        $obj->get();
-        $this->data['endereco'] = $obj->all_to_array();
-    }
+    
 }
 ?>

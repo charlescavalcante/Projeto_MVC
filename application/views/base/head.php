@@ -43,7 +43,7 @@
                                 <li><a href="#">Nome_Usuário</a></li>
                                 <li><a href="<?=base_url('usuarios')?>">Usuários</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?=base_url('Usuarios/logout')?>">Sair</a></li>
+                                <li><a href="<?=base_url('usuarios/logout')?>">Sair</a></li>
                             </ul>
                         </div>
                     </li>
